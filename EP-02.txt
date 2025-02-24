@@ -1,0 +1,88 @@
+//Igniting our App
+NPM: manages packages for the javascript programming language maintained by npm
+npm init : it will create package.json . 
+it is the configuration for your NPM.
+the most imp package in our project is a bundler.it packages or code to push it to production.
+create-react-app uses web pack and babel for bundling
+we will be using parcel bundler: npm i -D parcel
+why D in the command> there 2 types of packages one is dev dependancy and other one is normal
+development phase requires dev dependancy. normal is used in production mode. here D is dev dependancy
+
+ "devDependencies": {
+    "parcel": "^2.13.3"
+  }
+  we can write 
+  if tomorrow a new minor version is getting upgraded and 
+  if you have put carat ^ it will automatically upgrate to that
+   IF WE WILL WRITE ~ THEN IT WILL upgrade TO MAJOR VERSION
+
+   why we have package-lock.json? keeps record of every exact version of dependancy installed  
+   integrity in package-lock json:contains hash
+   parcel as a project has its own dependancies .it is known as transitive dependancies. that is why when we install parcel it installs other packages
+   every packages has its own package.json
+   if you have package.json and package=lock.json you can recreate nodemodules
+   npx parcel index.html : parcel will create a server for us and run our application in it. it will give url like http://localhost:1234
+   npm : we are just calling the npm. npx: for executing the package
+    npx parcel index.html : index.html is the source npx executes parcel and it goes to index.html and shows us the application in the url
+ npm install react npm install react-dom : after this we dont need react CDN and we need to import React from react and react-dom
+
+# Parcel
+
+-Dev Build
+-Local server
+-HMR = Hot Module replacement
+-parcel using File watching Algorithm -written in c++
+- parcel caches - Faster Build
+- parcel does image optimization
+-production build will do  minification and bundling
+- also it will compress the code
+- consistent hashing
+- code splitting
+-differential bundling : to support older browsers
+- Diagnostic
+- Error Handling
+- to host apps in https
+- tree shaking Algorithm - remove unused code 
+- Different dev and prod bundles
+for prod build: npx parcel build index.html error: we will get error. and we need to remove main from package.json.
+when we build it will put all those file in dist folder
+
+browserlist.dev we have to configure in package.json
+
+"browsersList":{
+    ["last 2 Chrome version","last 2 Firefox version"]
+  }
+  suppose your app is a government app then we need to use the app in older browser
+
+gest? for test cases
+
+
+Episode - 03:
+we can create scripts under sripts in package.son . here we added start for dev and build for production.
+after this we can write npm run start or npm start instead of npx parcel index.html
+if we are working on a new project and dont know the commands to start the app go to package.json and check the scripts.
+ Reactelement is an object and when we render it to browser it becomes HTMLElement
+ JSX: javascript syntax to write html element
+ jsx is not html in javascript. it is html like or xml like syntax. in jsx attributes are camel case like className,tabIndex
+
+ React functional component: its normal javascript function
+ why arrow functions are used in functional component react??
+ we can write normal function.
+ In traditional function expressions, the this value is dynamically scoped, which can lead to confusion and errors, particularly when dealing with nested functions or event handlers. Arrow functions, on the other hand, have a lexical this binding, meaning they inherit the this value from the surrounding code. In React components, this is particularly useful as it allows you to access the component's this context without the need for manual binding.
+ Component composition: component inside another component
+ JSX sanitizes data what is inside {}
+
+ EP-04
+
+ Props: are just normal arguments to function.
+ passing props to a component is like passing arguments to function
+ Config driven UI: website driven by data. controlling UI using config/data
+ comma separated from an array . array.join(",");
+ cloudnaryimageid: when you develop large app you put all your image in 
+ why id is imp in map operation : for uniquely identityfy the elements. its for optimizations for performance. it doesnt have to rerender everything.
+ why its not recommenned to use index for key?react itself says that dont use index as keys bcz order of the elements  can be changed.
+ if you dont have a id in your data you can use index but its not recommended
+ not using keys (not acceptable) <<<< index as key <<<< unique id(best practice)
+
+EP-05
+ React Hooks
