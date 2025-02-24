@@ -103,3 +103,29 @@ can we do both on the same component
  Diff Algorithm: DOM is nothing but JS objects. react  will first compare the old and new updated objects and then update UI. it suncs data and ui
  go to git hub acdlite/react-fibre-architecture.https://github.com/acdlite/react-fiber-architecture
  React is fast bcz react is doing efficient dom manipulation. it has concept of virtual DOM. React has a diff Algorithm 
+
+ EP-06
+ there are 2 approach for endering ui
+ 1. loads -> API -> Render page with data
+ 2. loads -> Renders->API -> Render page with data
+ we will go for approach 2 always. in react render cycles are very fast. so we dont need to bother about 2 renders it will give better user exprience
+ useEffect: the call back in useeffect is called after the component renders
+ cors access control
+ Shimmer UI
+ why do we have usestate and when do we use it ?
+ why we use call back function in onclick event handler of button element?
+ how can a const variable can be changed in useState? when we set the variable the components get rerenders and creates a new instance. the variable is a new variable.
+ 
+ const [searchText, setSearchText] = useState("");
+ <input
+            type="text"
+            className="search-box"
+            value={searchText}
+            onChange={(e) => {
+              setSearchText(e.target.value);
+            }}
+          />
+we need to write onChange because input value is bind to searchText and we need to change input by setting the variable searchText.
+whenever state variables update, react triggers a reconcilation cycle( re-renders the component)  
+react fiber uses reconcilation . it compares 2 virtual DOMs and updated only the required portion.
+tolower vs tolowerlocale       
