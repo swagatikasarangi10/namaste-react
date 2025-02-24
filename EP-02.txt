@@ -85,4 +85,21 @@ if we are working on a new project and dont know the commands to start the app g
  not using keys (not acceptable) <<<< index as key <<<< unique id(best practice)
 
 EP-05
+Read file structure from react site
+there are 2 types of import and export 1. export default Header;
+while import : import Header from "path"
+named export : when you have multiple things to export. while import we need to write it inside { }.
+ex: import { CDN_URL } from "../utils/constants";
+can we do both on the same component
  React Hooks
+ hook is normal js function given to us. utility functions
+ - useState() - superpowerful State Variables in react
+ - useEffect()
+ react is very good with dom manipulation
+ whenever a state variable updates react rerenders the component
+
+ React uses Reconciliation Algorithm(React fibre)(React 16)
+ Virtual DOM is the representation of actual DOM
+ Diff Algorithm: DOM is nothing but JS objects. react  will first compare the old and new updated objects and then update UI. it suncs data and ui
+ go to git hub acdlite/react-fibre-architecture.https://github.com/acdlite/react-fiber-architecture
+ React is fast bcz react is doing efficient dom manipulation. it has concept of virtual DOM. React has a diff Algorithm 
