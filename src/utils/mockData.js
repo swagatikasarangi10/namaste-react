@@ -3,7 +3,7 @@ const resList = [
     type: "restaurant",
     data: {
       type: "F",
-      id: "334475",
+      id: "1",
       name: "KFC",
       uuid: "eaed0e3b-7c0e-4367-8f59-f41d309fb93a",
       city: "1",
@@ -128,7 +128,7 @@ const resList = [
     type: "restaurant",
     data: {
       type: "F",
-      id: "229",
+      id: "2",
       name: "Meghana Foods",
       uuid: "4fdd19e2-5d0f-4bde-9c7f-dc3e8d36021f",
       city: "1",
@@ -255,7 +255,7 @@ const resList = [
     type: "restaurant",
     data: {
       type: "F",
-      id: "121603",
+      id: "3",
       name: "Kannur Food Point",
       uuid: "51983905-e698-4e31-b0d7-e376eca56320",
       city: "1",
@@ -390,7 +390,7 @@ const resList = [
     type: "restaurant",
     data: {
       type: "F",
-      id: "307050",
+      id: "4",
       name: "Call Me Chow",
       uuid: "b9bf2a17-faf9-4e4a-a6a7-61197d4bafa0",
       city: "1",
@@ -515,7 +515,7 @@ const resList = [
     type: "restaurant",
     data: {
       type: "F",
-      id: "337335",
+      id: "5",
       name: "Kannur food kitchen",
       uuid: "c70b61bc-0f68-4e24-996b-749fbf295c35",
       city: "1",

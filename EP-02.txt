@@ -128,4 +128,42 @@ can we do both on the same component
 we need to write onChange because input value is bind to searchText and we need to change input by setting the variable searchText.
 whenever state variables update, react triggers a reconcilation cycle( re-renders the component)  
 react fiber uses reconcilation . it compares 2 virtual DOMs and updated only the required portion.
-tolower vs tolowerlocale       
+tolower vs tolowerlocale
+
+corsproxy.io
+EP-07
+Routing
+useEffect with no dependancy array is calld everytime components renders. after the component renders
+if there is an empty dependancy array =>[] =>then useEffect is called once on initial render. it wont get called again and again
+if there is dependancy array peresent [btnNameReact] => useEffect gets called everytime btnNameReact changes.
+never create useState outside of your component.always create inside your components.
+it is used to create local state variable for your component. always create it in the top.
+Never create useState inside if else code.
+
+Routing: import createbrowserroute from react-router-dom
+const approuter= createBrowserrouter([
+  {
+    path:"/",
+    element:<Header/>
+  }
+])
+import RouterProvider : it will provide router config to render
+useRouteError from react-router-dom
+const err= useRouteError()
+err.statusText
+in react we should not use anchor tag to navigate to another page.as it refreshes the page and reloads the page.
+we will use LINK react-router-dom
+there are 2 types of routing in web apps
+- Client Side Routing : in SPA components gets interchanged using client side routing 
+- Server Side Routing : when there is a network call and page gets loaded from server
+
+what is dynamic route?
+{
+        path: "/restaurants/:resId",
+        element: <RestaurantMenu />,
+      },
+
+ here :resId is dynamic     
+ useParams from react-router-dom
+ const params = useParams()
+ body.js
