@@ -167,3 +167,37 @@ what is dynamic route?
  useParams from react-router-dom
  const params = useParams()
  body.js
+
+ EP-08
+import React from "react";
+ class UserClass extends React.Component
+ class component is a class extends react.component wich has render method which returns js code
+
+ why do we have to always write super(props) while passing data to classComponent?
+ earlier in class component hooks were not there.
+ we will create state variable inside constructor using this.state object
+ this.state.count2= this.state.count2+1; // never update state variables directly 
+ use this.setState({})
+ what is component life cycle?
+ componentDidMount() : first constructor=> render=> componentdidmount
+ if there is parent and child how it will render>
+ first parent cos of parent then parent render then it will go to child class component now child constructore then child render then child comonentdidmount and then parentcomponentmount.
+ if there are multiple child classes how the order works?
+ /*
+ - Parent constructor
+ - Parent Render
+   - first child constructor
+   - first child render
+   - second child constructor
+   - second child render
+   - first child component componentDidMount
+   - second child component componentDidMount
+   - parent component componentDidMount
+there are 2 phase of lifecycle : renser and commit
+Recat will batch the render phase of 2 child components and then batches commit phase bcz dom manipulation is very expensive
+   https:// projects.wojtekmaj.pl/reacr-lifecycle-methods-diagram
+ 
+ 
+ */
+ what is the use of componentDidMount.: using api calls
+ why we need that?bcz we reneder the component first and then do the api call
