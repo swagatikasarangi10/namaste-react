@@ -199,5 +199,55 @@ Recat will batch the render phase of 2 child components and then batches commit 
  
  
  */
+
+ /*
+ 
+ Constructor(dummy)
+ Render (dummy)
+ <html Dummy>
+ Component Did componentDidMount
+ <api call>
+ <this.setState> ---> state variable is updated
+ now the update cycles begin
+
+ ----update
+ render(Api data)
+ <Html (new api data)>
+
+ Componentdid Update
+
+
+ */
+ disadv of SPA: when you change the pages it doesnt reload the page it only changes components.
+
  what is the use of componentDidMount.: using api calls
  why we need that?bcz we reneder the component first and then do the api call
+ why we need unamount?
+ if there a setinterval or settimeout in one component then even if you navigate to another page it keeps running bcz react is SPA.
+ or when you again go to that component it will craete another instance of setinterval.
+ so we need to write clearinterval inside compoentwillunamount
+
+ return function is callde inside useEffect when you want to unmount.
+ useEffect(()=>{
+ const timer= setTimer(()=>{
+
+ },100)
+  return ()=>{
+    clearinterval(timer)
+    // this will get called when you moves away from page
+  }
+ },[])
+
+ we cant wrire aync in useeffect why?
+
+ EP 09
+ custom hook: always start the name of custom hook with :use
+ hooks are like helper functions. create under utils
+ go to network tab to similate offline situation
+
+ network tab select offline from header
+ linters? eslint
+
+ app chunking// Code Splitting// Lazy loading//Dynamic bundling//Ondemand loading
+ bundle should have code for features of websites.
+ we will splitt our bundling for grocery component
